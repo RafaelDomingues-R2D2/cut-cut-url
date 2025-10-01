@@ -9,8 +9,8 @@ datasource db {
 
 model Url {
   id String @id @default(uuid())
-  old_url String
-  new_url String
+  oldUrl String @map("old_url")
+  newUrl String @map("newUrl") @unique
 
   createdAt DateTime @default(now())
 
